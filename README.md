@@ -24,14 +24,14 @@ Install it with:
 ## Usage
 
 ```python
-import WebfleetConnect
+from webfleet_connect import WebfleetConnect
 
-webfleet_connect = WebfleetConnect.create
+webfleet_connect = WebfleetConnect.create()
 response = webfleet_connect.show_object_report_extern()
-response.to_hash # [{:objectno=>"858EU4", :objectname=>"YRT-MMD2439", :objectclassname=>"sales", ...
+response.to_hash() # [{:objectno=>"858EU4", :objectname=>"YRT-MMD2439", :objectclassname=>"sales", ...
 ```
 
-`WebfleetConnect.create` returns a new `Session` object which has the capabilities to request info from the WEBFLEET.connect API.
+`WebfleetConnect.create()` returns a new `Session` object which has the capabilities to request info from the WEBFLEET.connect API.
 
 The Webfleet credential are taken from the env variables `WEBFLEET_CONNECT_ACCOUNT`, `WEBFLEET_CONNECT_USERNAME`, `WEBFLEET_CONNECT_PASSWORD` and `WEBFLEET_CONNECT_APIKEY` (if you want to know more about env variables check [this link](https://www.freecodecamp.org/news/python-env-vars-how-to-get-an-environment-variable-in-python/)).
 
@@ -51,12 +51,12 @@ webfleet_connect = WebfleetConnect.create(params)
 When you use one of the methods of this gem, like for example `show_vehicle_report_extern`, this returns a `WebfleetConnectResponse` object which you can do:
 
 ```python
-response = webfleet_connect.show_vehicle_report_extern
+response = webfleet_connect.show_vehicle_report_extern()
 
-response.url         # gets the url to fetch the informtion from WEBFLEET.connect
-response.status_code # gets the status code of the request
-response.to_s        # returns the response message as plain text as is returned by WEBFLEET.connect
-response.to_hash     # returns the data as a ruby Array/Hash object
+response.url()         # gets the url to fetch the informtion from WEBFLEET.connect
+response.status_code() # gets the status code of the request
+response.str()         # returns the response message as plain text as is returned by WEBFLEET.connectby WEBFLEET.connect
+response.to_hash()     # returns the data as a ruby Array/Hash object
 ```
 
 The methods available in this package are the same that are documented in the [WEBFLEET.connect docs page](https://www.webfleet.com/static/help/webfleet-connect/en_gb/index.html) just changed from cammelCase to snake_case. See below the list of methods.

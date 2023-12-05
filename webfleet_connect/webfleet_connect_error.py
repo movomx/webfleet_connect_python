@@ -19,6 +19,9 @@ class WebfleetconnectError(Exception):
   def code(self):
     return int(self._code)
   
+  def url(self):
+    return self._url
+  
   def _api_docs_url(self):
     return f'{WebfleetconnectError.SITE}{WebfleetconnectError.PATH}'
 
