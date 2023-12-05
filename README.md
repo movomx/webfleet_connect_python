@@ -6,7 +6,7 @@
 
 Package to consume WEBFLEET.connect API.
 
-[![PyPI version](https://badge.fury.io/py/webfleet-connect-python.svg)](https://badge.fury.io/py/webfleet-connect-python)
+[![PyPI version](https://badge.fury.io/py/webfleet-connect-python.svg)](https://badge.fury.io/py/webfleet-connect)
 
 The WEBFLEET.connect API connects software appli­ca­tions with the Webfleet fleet management solution. Via WEBFLEET.connect you can enhance the value of all types of business solutions, including routing and scheduling optimization, ERP, Transport Management System (TMS), supply chain planning, asset management, and much more.
 
@@ -19,7 +19,7 @@ Check also the version for:
 
 Install it with:
 
-    $ pip install webfleet_connect
+    $ pip install webfleet-connect
 
 ## Usage
 
