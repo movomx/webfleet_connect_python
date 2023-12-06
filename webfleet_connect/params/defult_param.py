@@ -1,4 +1,4 @@
-from param import Param
+from .param import Param
 
 class DefaultParam(Param):
   def __init__(self, key, value):

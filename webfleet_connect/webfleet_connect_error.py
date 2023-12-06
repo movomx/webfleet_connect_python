@@ -1,5 +1,5 @@
-from format_handlers.json_response_parser import JsonResponseParser
-from format_handlers.csv_response_parser import CsvResponseParser
+from .format_handlers.json_response_parser import JsonResponseParser
+from .format_handlers.csv_response_parser import CsvResponseParser
 
 class WebfleetconnectError(Exception):
   SITE = 'https://www.webfleet.com'

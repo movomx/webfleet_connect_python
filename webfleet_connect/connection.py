@@ -1,8 +1,8 @@
 import requests
-from webfleet_connect_error import WebfleetconnectError
-from webfleet_connect_response import WebfleetConnectResponse
-from format_handlers.csv_error_parser import CsvErrorParser
-from format_handlers.json_error_parser import JsonErrorParser
+from .webfleet_connect_error import WebfleetconnectError
+from .webfleet_connect_response import WebfleetConnectResponse
+from .format_handlers.csv_error_parser import CsvErrorParser
+from .format_handlers.json_error_parser import JsonErrorParser
 
 class Connection:
   def __init__(self, session):

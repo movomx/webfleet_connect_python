@@ -1,4 +1,4 @@
-from defult_param import DefaultParam
+from .defult_param import DefaultParam
 
 class ParamsFactory():
   @classmethod

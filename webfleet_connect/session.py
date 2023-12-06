@@ -1,5 +1,5 @@
-from connection import Connection
-from actions.action import Action
+from webfleet_connect.connection import Connection
+from webfleet_connect.actions.action import Action
 
 class Session:
   def __init__(self, credentials, config):

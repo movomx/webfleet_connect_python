@@ -1,5 +1,5 @@
-from format_handlers.json_response_parser import JsonResponseParser
-from format_handlers.csv_response_parser import CsvResponseParser
+from .format_handlers.json_response_parser import JsonResponseParser
+from .format_handlers.csv_response_parser import CsvResponseParser
 
 class WebfleetConnectResponse():
   def __init__(self, response, url, is_json):
