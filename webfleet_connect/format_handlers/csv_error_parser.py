@@ -1,4 +1,4 @@
-from csv_response_parser import CsvResponseParser
+from .csv_response_parser import CsvResponseParser
 
 class CsvErrorParser():
   def is_error_found(self, response):
