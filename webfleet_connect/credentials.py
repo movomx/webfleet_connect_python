@@ -2,8 +2,8 @@ import os
 
 class Credentials:
   def __init__(self, params = {}):
-    merged = self._default_params().update(params)
-    self._accound = merged['account']
+    merged = self._default_params() | params
+    self._account = merged['account']
     self._username = merged['username']
     self._password = merged['password']
     self._apikey = merged['apikey']
@@ -11,7 +11,7 @@ class Credentials:
   def __str__(self):
     return f'{self.account()}&{self.username()}&{self.password()}&{self.apikey()}'
 
-  def _default_params():
+  def _default_params(self):
     return {
       'account': os.getenv('WEBFLEET_CONNECT_ACCOUNT'),
       'username': os.getenv('WEBFLEET_CONNECT_USERNAME'),

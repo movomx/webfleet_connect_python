@@ -3,7 +3,7 @@ class Config:
   PATH = 'extern'
 
   def __init__(self, params = {}):
-    merged = self._default_params().update(params)
+    merged = self._default_params() | params
     self._lang = merged['lang']
     self._format = merged['format']
     self._useUTF8 = merged['useUTF8']
@@ -16,10 +16,10 @@ class Config:
   def has_json(self):
     return self._format == 'json'
 
-  def _base_url():
+  def _base_url(self):
     return f'https://{Config.HOST}/{Config.PATH}'
 
-  def _default_params():
+  def _default_params(self):
     return {
       'lang': 'en',
       'format': 'json',
@@ -31,7 +31,7 @@ class Config:
     return f'lang={self._lang}'
   
   def format(self):
-    return f'format={self._format}'
+    return f'outputformat={self._format}'
   
   def useUTF8(self):
     return f'useUTF8={self._useUTF8}'

@@ -24,14 +24,15 @@ Install it with:
 ## Usage
 
 ```python
-from webfleet_connect import WebfleetConnect
+import webfleet_connect
 
-webfleet_connect = WebfleetConnect.create()
-response = webfleet_connect.show_object_report_extern()
-response.to_hash() # [{:objectno=>"858EU4", :objectname=>"YRT-MMD2439", :objectclassname=>"sales", ...
+wc = webfleet_connect.create()
+response = wc.show_object_report_extern()
+response.to_hash()
+# [{:objectno=>"858EU4", :objectname=>"YRT-MMD2439", :objectclassname=>"sales", ...
 ```
 
-`WebfleetConnect.create()` returns a new `Session` object which has the capabilities to request info from the WEBFLEET.connect API.
+`webfleet_connect.create()` returns a new `Session` object which has the capabilities to request info from the WEBFLEET.connect API.
 
 The Webfleet credential are taken from the env variables `WEBFLEET_CONNECT_ACCOUNT`, `WEBFLEET_CONNECT_USERNAME`, `WEBFLEET_CONNECT_PASSWORD` and `WEBFLEET_CONNECT_APIKEY` (if you want to know more about env variables check [this link](https://www.freecodecamp.org/news/python-env-vars-how-to-get-an-environment-variable-in-python/)).
 
@@ -45,13 +46,13 @@ params = {
   'apikey': 'ZSksD88s-F7Uf'
 }
 
-webfleet_connect = WebfleetConnect.create(params)
+wc = webfleet_connect.create(params)
 ```
 
 When you use one of the methods of this gem, like for example `show_vehicle_report_extern`, this returns a `WebfleetConnectResponse` object which you can do:
 
 ```python
-response = webfleet_connect.show_vehicle_report_extern()
+response = wc.show_vehicle_report_extern()
 
 response.url()         # gets the url to fetch the informtion from WEBFLEET.connect
 response.status_code() # gets the status code of the request
@@ -72,7 +73,7 @@ params = {
   'ungroupedonly': True
 }
 
-response = webfleet_connect.show_vehicle_report_extern(params)
+response = wc.show_vehicle_report_extern(params)
 ```
 
 The `rangefrom_string` and `rangeto_string` can accept `Time` objects:
@@ -89,7 +90,7 @@ params = {
   'rangeto_string': end_date
 }
 
-response = webfleet_connect.show_event_report_extern(params)
+response = wc.show_event_report_extern(params)
 ```
 
 The `range_pattern` can accept the values:
@@ -119,7 +120,7 @@ The `range_pattern` can accept the values:
 ```python
 params = { 'range_pattern': 'today' }
 
-response = webfleet_connect.show_event_report_extern(params)
+response = wc.show_event_report_extern(params)
 ```
 
 ### Extra config
@@ -146,7 +147,7 @@ config = {
 
 params = credentials.update(config)
 
-webfleet_connect = WebfleetConnect.create(params)
+wc = webfleet_connect.create(params)
 ```
 
 ### Methods list
