@@ -56,7 +56,7 @@ response = wc.show_vehicle_report_extern()
 
 response.url()         # gets the url to fetch the informtion from WEBFLEET.connect
 response.status_code() # gets the status code of the request
-response.str()         # returns the response message as plain text as is returned by WEBFLEET.connectby WEBFLEET.connect
+str(response)          # returns the response message as plain text as is returned by WEBFLEET.connectby WEBFLEET.connect
 response.to_hash()     # returns the data as a ruby Array/Hash object
 ```
 
