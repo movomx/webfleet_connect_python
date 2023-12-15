@@ -6,5 +6,5 @@ class DefaultParam(Param):
     self._value = value
 
   def _param_name(self):
-    self._key
+    return self._key
     
