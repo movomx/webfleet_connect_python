@@ -8,7 +8,7 @@ class WebfleetConnectResponse():
     self._parser = self._build_parser(is_json)
 
   def status_code(self):
-    return self.response.status_code
+    return self._response.status_code
   
   def to_hash(self):
     return self._parser.to_hash(self._response)
