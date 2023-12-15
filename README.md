@@ -145,7 +145,7 @@ config = {
   'useUTF8': True
 }
 
-params = credentials.update(config)
+params = credentials | config
 
 wc = webfleet_connect.create(params)
 ```
