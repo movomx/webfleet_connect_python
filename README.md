@@ -125,7 +125,7 @@ response = wc.show_event_report_extern(params)
 
 ### Extra config
 
-The `WebfleetConnect::Session` object works with the default configuration:
+The `Session` object works with the default configuration:
 
 `'lang': 'en', 'format': 'json', 'useUTF8': False, 'useISO8601': False`
 
