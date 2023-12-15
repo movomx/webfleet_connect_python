@@ -57,7 +57,7 @@ response = wc.show_vehicle_report_extern()
 response.url()         # gets the url to fetch the informtion from WEBFLEET.connect
 response.status_code() # gets the status code of the request
 str(response)          # returns the response message as plain text as is returned by WEBFLEET.connectby WEBFLEET.connect
-response.to_hash()     # returns the data as a ruby Array/Hash object
+response.to_hash()     # returns the data as a pyhton hash object
 ```
 
 The methods available in this package are the same that are documented in the [WEBFLEET.connect docs page](https://www.webfleet.com/static/help/webfleet-connect/en_gb/index.html) just changed from cammelCase to snake_case. See below the list of methods.
