@@ -3,7 +3,7 @@ class Param():
     self._value = value
 
   def __str__(self):
-    return f'&{self.param()}={self._value}'
+    return f'&{self._param_name()}={self._value}'
   
   def _param_name(self):
     return self._pascal_to_snake(self.__class__.__name__)
