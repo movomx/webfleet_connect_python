@@ -17,7 +17,7 @@ class WebfleetConnectError(Exception):
       f'Check {self._api_docs_url()} for more details.\n\n'
   
   def code(self):
-    return int(self._code)
+    return self._code
   
   def url(self):
     return self._url
