@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, 'README.md'), encoding='utf-8') as fh:
 
 setup(
   name='webfleet_connect',
-  version='0.1.28',
+  version='0.1.29',
   description='The WEBFLEET.connect API connects software applications with the Webfleet fleet management solution. Via WEBFLEET.connect you can enhance the value of all types of business solutions, including routing and scheduling optimization, ERP, Transport Management System (TMS), supply chain planning, asset management, and much more.',
   long_description=long_description,
   long_description_content_type='text/markdown',
