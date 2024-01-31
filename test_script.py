@@ -9,10 +9,10 @@ from session import create
 
 
 params = {
-    'account': 'rogermartin',
-    'username': 'Clugand',
-    'password': 'RM-21-geoloc',
-    'apikey': 'a00ab50e-32db-41f3-bfe8-c436a920ab7b'
+    'account': 'myaccount',
+    'username': 'myname',
+    'password': 'mypswd',
+    'apikey': 'myapi'
 }
 
 session = create(params)
