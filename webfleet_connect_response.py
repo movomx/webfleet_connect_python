@@ -1,11 +1,17 @@
+import pandas as pd 
 from .format_handlers.json_response_parser import JsonResponseParser
 from .format_handlers.csv_response_parser import CsvResponseParser
+from .session import Session
 
 class WebfleetConnectResponse():
   def __init__(self, response, url, is_json):
     self._response = response
     self._url = url
     self._parser = self._build_parser(is_json)
+    
+  def to_dataframe(self):
+    data = self._parser.to_hash(self._response)
+    return pd.DataFrame(data)
 
   def status_code(self):
     return self._response.status_code

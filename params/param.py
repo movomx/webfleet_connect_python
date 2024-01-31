@@ -8,7 +8,7 @@ class Param():
   def _param_name(self):
     return self._pascal_to_snake(self.__class__.__name__)
   
-  def _pascal_to_snake(text):
+  def _pascal_to_snake(self,text):
     result = [text[0].lower()]
     for char in text[1:]:
       if char.isupper():
